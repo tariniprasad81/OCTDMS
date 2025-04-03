@@ -5340,7 +5340,7 @@ box-shadow: 0px -4px 10px 3px #e8e8e8;
     margin-right: -375px;
     z-index: 3;
     margin-bottom: 30px;
-	margin-left:-15%;
+	margin-left:-10%;
 }
 .instagram-items li{
     position: relative;
@@ -5372,7 +5372,7 @@ box-shadow: 0px -4px 10px 3px #e8e8e8;
     transition: all 700ms ease 300ms;	
 }
 .instagram-items li .img-holder img {
-    width: 100%;
+    width: 155px;
     transform: scale(1.01);
     transition: all 700ms ease;
     padding: 3px;
