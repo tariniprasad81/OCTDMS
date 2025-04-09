@@ -13259,11 +13259,13 @@ ul.list.check-circle li:before {
 @media screen and (min-width: 768px) {
   #overlay img {
     width: 60%;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 1200px) {
   #overlay img {
     width: 50%;
+    height: 100vh;
   }
 }
 
@@ -14589,4 +14591,14 @@ ul.tabs li.active {
         background-color: #666;
         color: #fff;
     }
+}
+
+.img-wrapper-vertical{
+    width: 109px;
+    height: 148px;
+    margin: auto;
+    margin-top: 15px;
+}
+.img-wrapper-vertical img{
+    height: 145px;
 }
