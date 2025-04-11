@@ -143,13 +143,7 @@
 								  </ul>
                                 </li>
                                 <li><a href="advertisements.html">Advertisements</a></li>
-                                <li><a href="annual-reports.html">Annual Reports</a> </li>
-                                <li class="dropdown"><a href="#">Tenders <i class="fa fa-angle-down"></i></a>
-                                    <ul>
-	                                 <li><a href="consultancy.html">Consultancy</a></li>
-                         		     <li><a href="works.html">Works</a></li>
-								  </ul>
-                                </li>
+                                <li><a href="annual-reports.html">Annual Progress Reports</a> </li>
                                 <li><a href="manuals.html">Manuals</a></li>
                                 <li><a href="map-view.html">Map View</a> </li>
                                 <li class="current"><a href="contact-us.html">Contact Us</a></li>
@@ -192,124 +186,127 @@
                         </div>
                         <div class="about-text">
                             <form class="form-horizontal" id="contactForm" method="" action="javascript:void(0)" novalidate="novalidate" style="margin-left: -15px;">
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Name:<span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <input type="name" class="form-control" name="name" placeholder="Enter Name" id="name">
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Email:</label>
-                                  <div class="col-md-12">
-                                    <input type="email" class="form-control" name="email" placeholder="Enter Email" id="email">
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Mobile:<span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <input type="number" class="form-control" name="mobile" placeholder="Enter Mobile" id="phone">
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Gender:</label>
-                                  <div class="col-md-12">
-                                  <select class="form-control" id="gender">
-                                    <option value="">--Select Gender--</option>
-                                    <option value="1">Male</option>
-                                    <option value="2">Female</option>
-                                    <option value="3">Others</option>
-                                  </select>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Address:</label>
-                                  <div class="col-md-12">
-                                    <textarea class="form-control" id="address" rows="3"></textarea>
-                                  </div>
-                                </div>
-    
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Projects: <span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <select class="form-control" onchange="onchangeGrievance(this.value)" id="grievance" name="grievance">
-                                      <option value="">--Select Project--</option>
-                                      <!-- <option value="1">OCTDMS</option>
-                                      <option value="2">OIIPCRA</option>
-                                      <option value="3">GCF</option> -->
-                                    <option value="2">GCF</option><option value="1">OIIPCRA</option></select>
-                                  </div>
-                                </div>
-    
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">District: <span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <select class="form-control" onchange="onchangeDistrict(this.value)" id="district" name="district">
-                                      <!-- <option value="">Select District</option> -->
-                                      <!-- <option value="1">OCTDMS</option>
-                                      <option value="2">OIIPCRA</option>
-                                      <option value="3">GCF</option> -->
-                                    </select>
-                                  </div>
-                                </div>
-    
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Block: <span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <select class="form-control" onchange="onchangeBlock(this.value)" id="block" name="block">
-                                      <!-- <option value="">Select Block</option> -->
-                                      <!-- <option value="1">OCTDMS</option>
-                                      <option value="2">OIIPCRA</option>
-                                      <option value="3">GCF</option> -->
-                                    </select>
-                                  </div>
-                                </div>
-    
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Gramapanchayat: <span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <select class="form-control" onchange="onchangeGp(this.value)" id="gp" name="gp">
-                                      <!-- <option value="">Select GP</option> -->
-                                      <!-- <option value="1">OCTDMS</option>
-                                      <option value="2">OIIPCRA</option>
-                                      <option value="3">GCF</option> -->
-                                    </select>
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group" id="tanksDiv">
-                                  <label class="col-md-4 control-label">Tanks: <span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <select class="form-control select2-hidden-accessible" id="tanks" name="tanks" data-select2-id="select2-data-tanks" tabindex="-1" aria-hidden="true">
-                                      <!-- <option value="">Select Tank</option> -->
-                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-d8vb" style="width: 525px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-tanks-container" aria-controls="select2-tanks-container"><span class="select2-selection__rendered" id="select2-tanks-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label">Remarks: <span class="required">*</span></label>
-                                  <div class="col-md-12">
-                                    <textarea class="form-control" id="remarks" name="remarks" rows="3"></textarea>
-                                  </div>
-                                </div>
-    
-                                <div class="form-group" id="image" style="display: none;">
-                                  <label class="col-md-4 control-label">Select Image:</label>
-                                  <div class="col-md-12">
-                                    <input type="file" id="uploadImage" name="uploadImage" accept="image/png, image/jpeg, image/jpg">
-                                  </div>
-                                </div> 
-    
-                                <div class="form-group" id="document" style="display: none;">
-                                  <label class="col-md-4 control-label">Upload document:</label>
-                                  <div class="col-md-12">
-                                    <input type="file" id="uploadFile" name="uploadFile" accept="application/pdf,.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
-                                  </div>
-                                </div>
-    
-                                <div class="form-group">
-                                  <div class="col-md-10" align="right">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                  </div>
+                                <div class="row">
+
+                                    <div class="form-group col-md-6">
+                                      <label class="col-md-12 control-label">Name:<span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <input type="name" class="form-control" name="name" placeholder="Enter Name" id="name">
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label class="col-md-12 control-label">Email:</label>
+                                      <div class="col-md-12">
+                                        <input type="email" class="form-control" name="email" placeholder="Enter Email" id="email">
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label class="col-md-12 control-label">Mobile:<span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <input type="number" class="form-control" name="mobile" placeholder="Enter Mobile" id="phone">
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label class="col-md-12 control-label">Gender:</label>
+                                      <div class="col-md-12">
+                                      <select class="form-control" id="gender">
+                                        <option value="">--Select Gender--</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                        <option value="3">Others</option>
+                                      </select>
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                      <label class="col-md-12 control-label">Address:</label>
+                                      <div class="col-md-12">
+                                        <textarea class="form-control" id="address" rows="3"></textarea>
+                                      </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-12">
+                                      <label class="col-md-12 control-label">Projects: <span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <select class="form-control" onchange="onchangeGrievance(this.value)" id="grievance" name="grievance">
+                                          <option value="">--Select Project--</option>
+                                          <!-- <option value="1">OCTDMS</option>
+                                          <option value="2">OIIPCRA</option>
+                                          <option value="3">GCF</option> -->
+                                        <option value="2">GCF</option><option value="1">OIIPCRA</option></select>
+                                      </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-6">
+                                      <label class="col-md-12 control-label">District: <span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <select class="form-control" onchange="onchangeDistrict(this.value)" id="district" name="district">
+                                          <!-- <option value="">Select District</option> -->
+                                          <!-- <option value="1">OCTDMS</option>
+                                          <option value="2">OIIPCRA</option>
+                                          <option value="3">GCF</option> -->
+                                        </select>
+                                      </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-6">
+                                      <label class="col-md-12 control-label">Block: <span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <select class="form-control" onchange="onchangeBlock(this.value)" id="block" name="block">
+                                          <!-- <option value="">Select Block</option> -->
+                                          <!-- <option value="1">OCTDMS</option>
+                                          <option value="2">OIIPCRA</option>
+                                          <option value="3">GCF</option> -->
+                                        </select>
+                                      </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-6">
+                                      <label class="col-md-12 control-label">Gramapanchayat: <span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <select class="form-control" onchange="onchangeGp(this.value)" id="gp" name="gp">
+                                          <!-- <option value="">Select GP</option> -->
+                                          <!-- <option value="1">OCTDMS</option>
+                                          <option value="2">OIIPCRA</option>
+                                          <option value="3">GCF</option> -->
+                                        </select>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="form-group col-md-6" id="tanksDiv">
+                                      <label class="col-md-12 control-label">Tanks: <span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <select class="form-control select2-hidden-accessible" id="tanks" name="tanks" data-select2-id="select2-data-tanks" tabindex="-1" aria-hidden="true">
+                                          <!-- <option value="">Select Tank</option> -->
+                                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-d8vb" style="width: 525px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-tanks-container" aria-controls="select2-tanks-container"><span class="select2-selection__rendered" id="select2-tanks-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="form-group col-md-12">
+                                      <label class="col-md-12 control-label">Remarks: <span class="required">*</span></label>
+                                      <div class="col-md-12">
+                                        <textarea class="form-control" id="remarks" name="remarks" rows="3"></textarea>
+                                      </div>
+                                    </div>
+        
+                                    <div class="form-group" id="image" style="display: none;">
+                                      <label class="col-md-4 control-label">Select Image:</label>
+                                      <div class="col-md-12">
+                                        <input type="file" id="uploadImage" name="uploadImage" accept="image/png, image/jpeg, image/jpg">
+                                      </div>
+                                    </div> 
+        
+                                    <div class="form-group" id="document" style="display: none;">
+                                      <label class="col-md-4 control-label">Upload document:</label>
+                                      <div class="col-md-12">
+                                        <input type="file" id="uploadFile" name="uploadFile" accept="application/pdf,.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                                      </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-12 text-center mt-3">
+                                        <button type="submit" class="btn btn-contact">Submit</button>
+                                    </div>
+
                                 </div>
                               </form>
                         </div>

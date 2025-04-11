@@ -14446,12 +14446,12 @@ table th{
 
 }
 .heading_title {
-    font-family: 'MyriadHebrewBold';
+    /*font-family: 'MyriadHebrewBold';*/
     text-align: center;
 }
 table td p{ font-size: 14px;}
-table td>p>strong{font-family: 'MyriadHebrewBold'; color: #5e514b;}
-strong{font-family: 'MyriadHebrewBold';}
+table td>p>strong{/*font-family: 'MyriadHebrewBold';*/ color: #5e514b;}
+strong{/*font-family: 'MyriadHebrewBold';*/}
 .intable ul {
     padding: 0px 0px 0px;
     margin: 0px;

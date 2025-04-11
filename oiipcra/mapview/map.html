@@ -1,0 +1,1970 @@
+﻿<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../images/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/fav/favicon-16x16.png">
+    <!-- <link rel="manifest" href="manifest.html"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../images/fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+   <!--  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">-->
+    <link href="pagejs/mapcomponent/ol.css" rel="stylesheet" />
+    <link href="assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/vendor/fancybox-3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+
+<!--    <link rel="stylesheet" href="/resources/demos/style.css">-->
+
+    <title>Odisha Integrated Irrigation Project for Climate Resilient Agriculture (OIIPCRA)</title>
+    <style>
+
+.layerdiv{
+        /* color: #137aaa; */
+    border: 2px solid #d2d2d2;
+        box-shadow: 3px 1px 1px 1px #888888;
+    text-align: center;
+    /* border-bottom-right-radius: 4px; */
+    /* border-bottom-left-radius: 4px; */
+    /* line-height: 33px; */
+    /* font-size: 15px; */
+    /* font-weight: 300; */
+    /* margin-bottom: 5px; */
+    /* display: block; */
+    /* height: 21px; */
+    background: url(z_arrow.gif) 10px 8px no-repeat #5877a45e;
+    /* color: #080b0f; */
+    font: normal 15px/27px Tahoma, Arial, Helvetica, sans-serif;
+}
+    #searchLoader, #searchLoader1  {
+    z-index: 1001;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../images/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+  #searchLoader4 {
+    z-index: 1001;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../images/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+   #searchLoader2  {
+    z-index: 1001;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    background-image: url(../images/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+#searchLoader3  {
+    z-index: 1001;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    background-image: url(../images/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+    #wkslist {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+
+    .ol-attribution.ol-uncollapsible {
+      bottom: 7px;
+    /* right: -11px; */
+    /* border-radius: 4px 0 0; */
+    /* height: 1.1em; */
+    line-height: 1em;
+}
+.scale {
+    top: 86px;
+    right: 40px;
+    padding: 2px;
+    position: fixed;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+
+<!--     #map2 .ol-zoomslider {-->
+<!--            top: 5.5em;-->
+<!--            left: auto;-->
+<!--            height: 174px;-->
+<!--            right: 8px;-->
+<!--            background-color: rgb(206 215 246 / 88%);-->
+<!--    /* position: fixed; */-->
+<!--    padding: 0;-->
+<!--    box-shadow: 0 0 5px rgb(172 155 149);-->
+
+<!--            border-radius: 20px;-->
+<!--        }-->
+#map2 .ol-zoomslider {
+       top: 14px;
+    left: auto;
+    right: 195px;
+    background-color: rgb(222 186 173 / 20%);
+    width: 200px;
+    height: 15px;
+    padding: 0;
+    box-shadow: 0 0 5px rgb(117 75 75);
+    border-radius: 7.5px;
+      }
+
+      #map2 .ol-zoomslider:hover {
+        background-color: rgba(255,69,0,0.3);
+      }
+
+      #map2 .ol-zoomslider-thumb {
+       height: 15px;
+    width: 15px;
+    margin: 0;
+    border-left: 8px solid #3c3330;
+    /* padding: 4px; */
+    filter: none;
+    background-color: rgba(255,69,0,0.6);
+    border-radius: 7.5px;
+      }
+      #map2 a.ol-zoomslider-handle:hover {
+        background-color: rgba(255,69,0,0.7);
+      }
+
+
+        #map2 .ol-zoom {
+               top: 1.5em;
+    left: auto;
+    right: 7px;
+        }
+            #map3 .ol-zoom button {
+                background-color: rgba(40, 40, 40, .7);
+                border-radius: 50%;
+                content: '';
+            }
+        .zoomslider {
+            top: 4.5em;
+            left: 106.5em;
+            height: 200px;
+            background-color: rgb(224, 225, 223);
+        }
+        #map2 .ol-zoom button {
+    background-color: rgba(40, 40, 40, .7);
+    border-radius: 50%;
+    content: '';
+}
+    .switcher2 {
+    //height: 197px;
+    overflow: hidden;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+<!--    top: 0;-->
+<!--    right: 0;-->
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-radius: .25rem;
+
+}
+#mySwitcher2{
+position: absolute;
+    left: 106px;
+    top: 7px;
+}
+#mySwitcher10{
+position: absolute;
+    left: 106px;
+    top: 7px;
+}
+  .switcher10 {
+    //height: 197px;
+    overflow: hidden;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-radius: .25rem;
+    width: 400px;
+    height: 509px;
+    overflow: auto;
+
+}
+ .switcher10 .closebtn {
+   position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    padding: 0px 7px;
+    z-index: 99;
+
+}
+.switcher2 .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    padding: 0px 7px;
+    z-index: 99;
+}
+
+.switcherMenu2 {
+    cursor: pointer;
+    //position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.switcherMenu2 i {
+
+<!--    animation-name: spin;-->
+<!--    animation-duration: 3000ms;-->
+<!--    animation-iteration-count: infinite;-->
+<!--    animation-timing-function: linear;-->
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+
+}
+
+.switcher3 {
+    height: 70%;
+    overflow: hidden;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    right: 0;
+    background-color: rgba(0,0,0,0.55);
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-radius: .25rem;
+}
+
+.switcher3 .fixHeightRight {
+    max-height: calc(100vh - 320px);
+}
+
+.switcher3 .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    padding: 0px 7px;
+    z-index: 99;
+}
+
+.switcherMenu3 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.switcherMenu3 i {
+    animation-name: spin;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .switcher, .switcher2, .switcher3 {
+        padding-top: 15px;
+    }
+
+    .switcher a, .switcher2 a, .switcher3 a {
+        font-size: 18px;
+    }
+}
+
+        header, footer {
+            background-color: #2f9bc5d1;
+        }
+
+        .map-section {
+            overflow:hidden;
+            height: 100vh;
+            width: 100vw;
+             background-color: #fefefe;
+             background-image: url(https://www.transparenttextures.com/patterns/clean-gray-paper.png);
+        }
+        @media (min-width: 576px) {
+         .map-section {
+            height: calc(100vh - 136px);
+            }
+           }
+
+        .popover-body {
+            min-width: 276px;
+        }
+
+        .picture-gallery span {
+            max-width: 33%;
+            display: block;
+            float: left;
+            padding: 2px;
+        }
+
+        .klcompass {
+            top: 50px;
+           // bottom: 50px;
+            //right: 20px;
+        }
+
+        .klmapmenu {
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            max-width: 400px;
+            width: 100vw;
+        }
+
+        .mycolapsable {
+            margin-top: 8px;
+        }
+
+            .mycolapsable ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .mycolapsable li .form-group {
+                margin-bottom: 8px;
+            }
+
+            .mycolapsable .expander {
+                width: 45px;
+            }
+
+                .mycolapsable .expander .fa-minus {
+                    display: none;
+                }
+
+            .mycolapsable li.open > .row > .expander .fa-plus {
+                display: none;
+            }
+
+            .mycolapsable li.open > .row > .expander .fa-minus {
+                display: inline;
+            }
+
+            .mycolapsable li.leaf > .row > .expander .fa {
+                display: none;
+            }
+
+            .mycolapsable li > ul {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 300ms;
+            }
+
+            .mycolapsable li.open > ul {
+                max-height: 1000px;
+            }
+
+        .map .ol-custom-overviewmap,
+        .map .ol-custom-overviewmap.ol-uncollapsible {
+            left: auto;
+            right: 8px;
+            bottom: 50px;
+        }
+
+            .map .ol-custom-overviewmap:not(.ol-collapsed) {
+                border: 1px solid black;
+            }
+
+            .map .ol-custom-overviewmap .ol-overviewmap-map {
+                border: none;
+            }
+
+            .map .ol-custom-overviewmap .ol-overviewmap-box {
+                border: 2px solid red;
+            }
+
+            .map .ol-custom-overviewmap:not(.ol-collapsed) button {
+                left: auto;
+                right: 1px;
+            }
+
+        .ol-tooltip {
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            color: white;
+            padding: 4px 8px;
+            opacity: 0.7;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        .ol-tooltip-measure {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        .ol-tooltip-static {
+            background-color: #ffcc33;
+            color: black;
+            border: 1px solid white;
+        }
+
+        .tooltab-btn a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 576px) {
+            .map .ol-custom-overviewmap,
+            .map .ol-scale-line {
+                bottom: 50px;
+            }
+        }
+
+<!--        @media (min-width: 576px) {-->
+<!--            .map-section {-->
+<!--                height: calc(100vh - 136px);-->
+<!--            }-->
+
+<!--            .klmapmenu {-->
+<!--                right: 10px;-->
+<!--                bottom: auto;-->
+<!--                top: 10px;-->
+<!--                width: calc(100vw - 20px);-->
+<!--            }-->
+
+<!--            .map .ol-custom-overviewmap {-->
+<!--                bottom: .5em;-->
+<!--            }-->
+<!--        }-->
+
+        .myaccordion {
+            max-width: 500px;
+            /*margin: 50px auto;*/
+            box-shadow: 0 0 1px rgba(0,0,0,0.1);
+        }
+
+            .myaccordion .card,
+            .myaccordion .card:last-child .card-header {
+                border: none;
+            }
+
+            .myaccordion .card-header {
+                border-bottom-color: #EDEFF0;
+                background: transparent;
+            }
+
+            .myaccordion .fa-stack {
+                font-size: 18px;
+            }
+
+            .myaccordion .btn {
+                width: 100%;
+                font-weight: bold;
+                color: #004987;
+                padding: 0;
+            }
+
+            .myaccordion .btn-link:hover,
+            .myaccordion .btn-link:focus {
+                text-decoration: none;
+            }
+
+            .myaccordion li + li {
+                margin-top: 10px;
+            }
+
+        .btn.focus, .btn:focus {
+            box-shadow: 0 0 0 rgb(0 123 255 / 25%);
+        }
+
+        .controls {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            z-index: 1;
+            padding: 6px 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .sidebar, .toggle {
+            transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+        }
+
+        .sidebar {
+            background: lightgrey;
+            width: 200px;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .toggle {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            background: black;
+        }
+
+        .sidebar-collapsed {
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+        }
+
+            .sidebar-collapsed .toggle {
+                right: -5px;
+                transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+            }
+            .ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 300px;
+}
+.ol-popup table{
+    font-size: 0.7rem;
+}
+.ol-popup table th, .ol-popup table td{
+    padding: 0.2rem;
+}
+
+    .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+    }
+
+    .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+    }
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+    .ol-popup-closer:after {
+		content: "✖";
+    }
+.ol-popup-content{
+    max-height: 320px;
+    overflow: auto;
+    overflow-x: hidden;
+    height: auto;
+}
+.ol-popup h5{
+    color: #0d89d2;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+.ol-popup-closer{
+    background-color: #f00;
+    color: #fff;
+    text-shadow: none;
+    padding: 0px 4px;
+    line-height: 20px;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    opacity: 0.5;
+}
+.ol-popup-closer:hover{
+    opacity: 1;
+    color: #fff;
+    text-shadow: none;
+}
+.ol-scale-line{
+    /*bottom: 80px;*/
+    left: 40px;
+}
+.ol-mouse-position{
+    /*bottom: 80px;*/
+    color: #000;
+    font-weight: bold;
+    margin-left: 50px;
+}
+.ol-control{
+    /*bottom: 80px !important;*/
+    background-color: transparent;
+}
+.ol-zoomslider{
+    height: 15%;
+    background-color: rgba(255,255,255,.4);
+}
+
+
+            * {
+    padding:0;
+    margin:0
+}
+.social-icons {
+	list-style: none;
+	width: 50px;
+  position: fixed;
+  top:30%;
+
+}
+.social-icons li {
+	float:none;
+  display: block;
+}
+.social-icons li a {
+    display:inline-block;
+    width:40px;
+    height:40px;
+
+    background-color:white;
+    overflow:hidden;
+
+}
+.social-icons li a i {
+    padding:13px
+}
+.facebook {
+    color:#3d5b99
+}
+.facebook:hover {
+    color:#fff;
+  	background-color: #3d5b99
+}
+.twitter {
+    color:#00aced
+}
+.twitter:hover {
+    color:#fff;
+  	background-color: #00aced
+}
+.youtube {
+    background-image: url(images/rectzoom.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-color: white;
+
+}
+.youtube:hover {
+    color:#fff;
+	  background-color: #e64a41
+}
+.linkedin {
+    color:#0073a4
+}
+.linkedin:hover {
+    color:#fff;
+  	background-color: #0073a4
+}
+.google-plus {
+
+}
+.google-plus:hover {
+    color:#fff;
+  	background-color: #e25714
+}
+.facebook,
+.twitter,
+.youtube,
+.linkedin,
+.google-plus {
+    -o-transition:.5s ease;
+  	-ms-transition:.5s ease;
+  	-moz-transition:.5s ease;
+  	-webkit-transition:.5s ease;
+  	transition: .5s ease
+}
+.facebook:hover,
+.twitter:hover,
+.youtube:hover,
+.linkedin:hover,
+.google-plus:hover {
+    width:40px
+}
+.leftlayerpanel{
+list-style: none;
+    width: 50px;
+    position: fixed;
+    top: 36%;
+    right:0;
+}
+
+
+ .myButton {
+    padding: .2em 1em;
+    font-size: 1em;
+}
+.mySelect {
+    padding: .2em 0;
+    font-size: 1em;
+}
+#myDiv {
+    color:Green;
+    background-color:#eee;
+    border:2px solid #333;
+    display:none;
+    text-align:justify;
+}
+#myDiv p {
+    margin: 15px;
+    font-size: 0.917em;
+}
+
+.content {
+  text-align: center;
+  width: 250px;
+  height: auto;
+  background: #f7f7f7;
+  padding: 10px 10px;
+  border-radius: 20px 0px 0 20px;
+}
+#wrap {
+  position: absolute;
+  right: 0px;
+  top: 27px;
+  display: none;
+}
+
+#wrap2 {
+  position: absolute;
+  right: 0px;
+  top: 27px;
+  display: none;
+}
+#wrap3 {
+  position: absolute;
+  right: 0px;
+  top: 27px;
+  display: none;
+}
+
+#wrap4 {
+  position: absolute;
+  right: 0px;
+  top: 27px;
+  display: none;
+}
+#wrap5 {
+  position: absolute;
+  right: 0px;
+  top: 27px;
+  display: none;
+}
+.open-call {
+
+
+padding: 10px 13px;
+    /* font-size: 22px; */
+    cursor: pointer;
+    /* background-color: #d5d7dfa8; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+     background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+
+
+}
+.open-call :hover {
+  background-color: yellow;
+}
+.open-call8 {
+
+
+<!--padding: 10px 13px;-->
+    /* font-size: 22px; */
+    cursor: pointer;
+    /* background-color: #d5d7dfa8; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+     background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+
+
+}
+.open-call8 :hover {
+  background-color: yellow;
+}
+.open-call2 {
+
+padding: 10px 13px;
+    /* font-size: 22px; */
+    cursor: pointer;
+    /* background-color: #d5d7dfa8; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+
+}
+.open-call3 {
+
+padding: 10px 13px;
+    /* font-size: 22px; */
+    cursor: pointer;
+    /* background-color: #d5d7dfa8; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+}
+.open-call4 {
+
+padding: 10px 13px;
+    /* font-size: 22px; */
+    cursor: pointer;
+    /* background-color: #d5d7dfa8; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+
+}
+.open-call5 {
+
+padding: 0px 14px;
+    /* font-size: 22px; */
+    cursor: pointer;
+    /* background-color: #d5d7dfa8; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+
+}
+.close-call {
+  position: absolute;
+<!--  left: 10px;-->
+<!--  top: 10px;-->
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  left: 225px;
+    top: 0px;
+    z-index:9999;
+}
+.close-call2 {
+  position: absolute;
+<!--  left: 10px;-->
+<!--  top: 10px;-->
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  left: 225px;
+    top: 0px;
+    z-index:9999;
+}
+.close-call3 {
+  position: absolute;
+<!--  left: 10px;-->
+<!--  top: 10px;-->
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  left: 225px;
+    top: 0px;
+    z-index:9999;
+}
+.close-call4 {
+  position: absolute;
+<!--  left: 10px;-->
+<!--  top: 10px;-->
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  left: 225px;
+    top: 0px;
+    z-index:9999;
+}
+.close-call5 {
+  position: absolute;
+<!--  left: 10px;-->
+<!--  top: 10px;-->
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  left: 225px;
+    top: 0px;
+    z-index:9999;
+}
+.close-call8 {
+  position: absolute;
+<!--  left: 10px;-->
+<!--  top: 10px;-->
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  left: 225px;
+    top: 0px;
+    z-index:9999;
+}
+.tooglebutton{
+    position: absolute;
+    right: 247px;
+    top: 4%;
+}
+ #maplayer:hover {
+
+             color:#fff;
+  	        background-color: #e25714
+
+        }
+
+          #table_data {
+            position: absolute;
+            bottom: 0px;
+            overflow: scroll;
+            left: 0px;
+            right: 0px;
+            height: 0%;
+            z-index: 99999;
+            background:#c9bccdf5;
+        }
+
+        #table {
+            white-space: nowrap;
+            grid-template-areas: "head-fixed" "body-scrollable";
+        }
+
+        #showData {
+            overflow: auto;
+            width: 100%;
+        }
+
+
+        #table th {
+            position: -webkit-sticky; /* for Safari */
+            position: sticky;
+            top: 0;
+            background-color: darksalmon;
+        }
+
+        #table_wms_layers {
+            width: 100%;
+            height: 350px;
+            white-space: nowrap;
+            border-collapse: separate;
+            font-family: arial;
+            font-size: 14px;
+        }
+
+            #table_wms_layers th {
+                position: -webkit-sticky; /* for Safari */
+                position: sticky;
+                top: 0;
+                background-color: darksalmon;
+            }
+    </style>
+    <style type="text/css">
+        .overlay{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: rgba(255,255,255,0.8) url("images/loader.gif") center no-repeat;
+    }
+
+    /* Turn off scrollbar when body element has the loading class */
+    body.loading{
+        overflow: hidden;
+    }
+    /* Make spinner image visible when body element has the loading class */
+    body.loading .overlay{
+        display: block;
+    }
+
+    fieldset {
+            display: none
+        }
+
+            fieldset.show {
+                display: block
+            }
+
+        select:focus,
+        input:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #2196F3 !important;
+            outline-width: 0 !important;
+            font-weight: 400
+        }
+
+        button:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            outline-width: 0
+        }
+
+        .tabs {
+            margin: 2px 5px 0px 5px;
+            padding-bottom: 10px;
+            cursor: pointer
+        }
+
+            .tabs:hover,
+            .tabs.active {
+                border-bottom: 1px solid #2196F3
+            }
+
+        a:hover {
+            text-decoration: none;
+            color: #1565C0
+        }
+
+        .box {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px
+        }
+
+<!--        .modal-backdrop {-->
+<!--            background-color: #64B5F6-->
+<!--        }-->
+
+        .line {
+            background-color: #CFD8DC;
+            height: 1px;
+            width: 100%
+        }
+
+        @media screen and (max-width: 768px) {
+            .tabs h6 {
+                font-size: 12px
+            }
+        }
+
+
+
+        .modal {
+  text-align: left;
+}
+.modal-content {
+  border: none;
+  border-radius: 2px;
+      box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21);
+}
+.modal-header{
+<!--  border-bottom: 0;-->
+  padding-top: 15px;
+  padding-right: 26px;
+  padding-left: 26px;
+  padding-bottom: 0px;
+}
+.modal-title {
+  font-size: 34px;
+}
+.modal-body{
+  border-bottom: 0;
+  padding-top: 5px;
+  padding-right: 26px;
+  padding-left: 26px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+.modal-footer {
+  border-top:0;
+  padding-top: 0px;
+  padding-right:26px;
+  padding-bottom:26px;
+  padding-left:26px;
+}
+.btn-default,.btn-primary {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    color: #424242;
+    background-color: #FFF;
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+}
+.btn-default:hover{
+  background-color: #FFF;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+}
+.btn-primary {
+  color: #FFF;
+  background-color: #2980B9;
+}
+.btn-primary:hover{
+  background-color: #2980B9;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+}
+footer {
+  text-align: center;
+}
+footer h4{
+  font-size: 2.92rem;
+  font-weight:100;
+    margin: 1.46rem 0 1.168rem;
+}
+
+.f-website {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+.f-website h2{
+  margin:0;
+  font-size: 24px;
+  font-weight: 100;
+  padding: 5px 10px;
+  font-style: italic;
+  color: #EEE;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.98), 2px 2px 0px rgba(0, 0, 0, 0.96), 3px 3px 0px rgba(0, 0, 0, 0.94), 4px 4px 0px rgba(0, 0, 0, 0.92), 5px 5px 0px rgba(0, 0, 0, 0.9), 6px 6px 0px rgba(0, 0, 0, 0.88), 7px 7px 0px rgba(0, 0, 0, 0.86), 8px 8px 0px rgba(0, 0, 0, 0.84), 9px 9px 0px rgba(0, 0, 0, 0.82), 10px 10px 0px rgba(0, 0, 0, 0.8), 11px 11px 0px rgba(0, 0, 0, 0.78), 12px 12px 0px rgba(0, 0, 0, 0.76), 13px 13px 0px rgba(0, 0, 0, 0.74), 14px 14px 0px rgba(0, 0, 0, 0.72), 15px 15px 0px rgba(0, 0, 0, 0.7), 16px 16px 0px rgba(0, 0, 0, 0.68), 17px 17px 0px rgba(0, 0, 0, 0.66), 18px 18px 0px rgba(0, 0, 0, 0.64), 19px 19px 0px rgba(0, 0, 0, 0.62), 20px 20px 0px rgba(0, 0, 0, 0.6), 21px 21px 0px rgba(0, 0, 0, 0.58), 22px 22px 0px rgba(0, 0, 0, 0.56), 23px 23px 0px rgba(0, 0, 0, 0.54), 24px 24px 0px rgba(0, 0, 0, 0.52), 25px 25px 0px rgba(0, 0, 0, 0.5), 26px 26px 0px rgba(0, 0, 0, 0.48), 27px 27px 0px rgba(0, 0, 0, 0.46), 28px 28px 0px rgba(0, 0, 0, 0.44), 29px 29px 0px rgba(0, 0, 0, 0.42), 30px 30px 0px rgba(0, 0, 0, 0.4), 31px 31px 0px rgba(0, 0, 0, 0.38), 32px 32px 0px rgba(0, 0, 0, 0.36), 33px 33px 0px rgba(0, 0, 0, 0.34), 34px 34px 0px rgba(0, 0, 0, 0.32), 35px 35px 0px rgba(0, 0, 0, 0.3), 36px 36px 0px rgba(0, 0, 0, 0.28), 37px 37px 0px rgba(0, 0, 0, 0.26), 38px 38px 0px rgba(0, 0, 0, 0.24), 39px 39px 0px rgba(0, 0, 0, 0.22), 40px 40px 0px rgba(0, 0, 0, 0.2), 41px 41px 0px rgba(0, 0, 0, 0.18), 42px 42px 0px rgba(0, 0, 0, 0.16), 43px 43px 0px rgba(0, 0, 0, 0.14), 44px 44px 0px rgba(0, 0, 0, 0.12), 45px 45px 0px rgba(0, 0, 0, 0.1), 46px 46px 0px rgba(0, 0, 0, 0.08), 47px 47px 0px rgba(0, 0, 0, 0.06), 48px 48px 0px rgba(0, 0, 0, 0.04), 50px 50px 0px transparent;
+}
+
+.lds-dual-ring.hidden {
+display: none;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 5% auto;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+    </style>
+</head>
+<body style="overflow-x: hidden;">
+
+    <header class="d-none d-sm-block">
+        <div class="header header-bg wow fadeIn" data-wow-duration="1500ms" style="background: #ddd;text-align:center;"> 
+        
+            <div class="container">
+                <div class="row"><div class="col-md-2 logo"><a href="index.html" title="" alt=""><img class="#" src="../images/oiipcra-logo-left.png"></a></div>
+                    <div class="col-md-8 logo3"><a href="index.html" title="" alt=""><img src="../images/oiipcra-logo-text.png" style="max-width:100%;"> </a> </div>
+                    <div class="col-md-2 logo2"><a href="#" title="" alt=""><img src="../images/govtodisha-logo.png" > </a> </div>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+
+    <section id="mapp" class="map-section">
+        <div class="overlay"></div>
+           <div class="container-fluid" style="background-color: #fff;"> 
+         
+                 <div class="row py-1 ">
+                    <div class="col-sm" style="font-size: 13px; font-family: 'Poppins';">
+                        <form class="form-inline justify-content-sm-middle" id="mapform">
+                            
+                            <label class="my-1 mr-2"><span style="font-weight: bolder;">Map View :</span></label>
+                            <div class="form-check form-check-inline map-type">
+                                <input class="form-check-input" name="mapType" type="radio" id="map_none" value="-1">
+                                <label class="form-check-label" for="map_none"><strong>None</strong></label>
+                            </div>
+                            <div class="form-check form-check-inline map-type">
+                                <input class="form-check-input" name="mapType" type="radio" id="map_sat" value="0" >
+                                <label class="form-check-label" for="map_sat"><strong>Satellite</strong></label>
+                            </div>
+                            <div class="form-check form-check-inline map-type">
+                                <input class="form-check-input" name="mapType" type="radio" id="map_modis" value="1">
+                                <label class="form-check-label" for="map_modis"><strong>Roads</strong></label>
+                            </div>
+                            <div class="form-check form-check-inline map-type">
+                                <input class="form-check-input" name="mapType" type="radio" id="map_snpp" value="2" checked>
+                                <label class="form-check-label" for="map_snpp"><strong>Open Street Map</strong></label>
+                            </div>
+
+                            <div class="form-check form-check-inline map-type"><a  onclick="goBack()" style="cursor: pointer;" ><i class="fa fa-home" aria-hidden="true" title="Home" style="font-size: 25px; color: #000;"></i></a>
+                                
+                            </div>
+                        </form>
+                    </div>
+					</div>
+            </div>        
+          
+       
+        <div id="searchLoader4" style="display: none;"></div>
+        <div id="loader" class="lds-dual-ring hidden overlay"></div>
+        <div class="position-relative h-100">
+            <div class="container-fluid h-100">
+<!--                <div class="sidebar">-->
+<!--                    <div class="toggle"></div>-->
+<!--                </div>-->
+
+
+
+                        <div id="accordion" class="myaccordion">
+
+                        </div>
+
+
+                        <div id="map2" class="map h-100"></div>
+                        <div id = "table_data"> </div>
+                        <div id="scale" class="scale"></div>
+
+
+
+                        <ul class="social-icons">
+                            <li> <a id="maplayer" class="switcher" title="Layer Panel" style="cursor: pointer;border-radius: 90%;padding: 5px;" onClick="openNav2()"><img id="maplayer2" src="images/layers.png" style="height:30px;width:30px;"></a></li>
+<!--                            <li> <a id="maplayer3" class="" title="Layer Panel" style="cursor: pointer;border-radius: 90%;padding: 5px;" onclick="openNavten()"><img id="maplayer4" src="images/asset.png" style="height:30px;width:30px;"></a></li>-->
+                            <li><a id="zoom-in" style="cursor: pointer;border-radius: 90%;"  title="Zoom In" class="facebook"><i class="fa fa-search-plus" aria-hidden="true"></i></a></li>
+                            <li><a id="zoom-out" style="cursor: pointer;border-radius: 90%;" title="Zoom Out" class="twitter"><i class="fa fa-search-minus" aria-hidden="true"></i></a></li>
+<!--                            <li><a    title="Rectangle Zoom"  style="cursor: pointer;border-radius: 90%;" class="youtube"></a></li>-->
+<!--                            <li><a  title="Pan"  style="cursor: pointer;border-radius: 90%;"class="linkedin"><i class="fa fa-arrows" aria-hidden="true"></i></a></li>-->
+                            <li><a  title="Reset Map"  style="cursor: pointer;border-radius: 90%;" id="zoom-restore" class="google-plus"><i class="fa fa-undo" aria-hidden="true"></i></a></li>
+<!--                            <li>-->
+<!--                                <a id="dialog2" style="cursor: pointer;border-radius: 90%;"  title="Legend" class="google-plus"><i class="fa fa-map-o" aria-hidden="true"></i>-->
+<!--                                </a>-->
+<!--                            </li>-->
+                            <li>  <a type="button" class="btn btn-light btn-md google-plus" style="cursor: pointer;border-radius: 90%;"  data-toggle="tooltip" data-placement="bottom" title="Area Mesurement Tool" id="measureArea">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.145 512.145" style="width: 18px;"><path d="M512.085 128.069c-.133-35.346-28.894-63.892-64.24-63.759-25.145.094-47.905 14.904-58.176 37.855l-54.64-9.136-5.344 31.568 54.912 9.168a64 64 0 0039.488 53.504l-15.584 117.552c-32.099 3.773-56.321 30.928-56.416 63.248v.24l-184.464 48.64a63.697 63.697 0 00-47.328-32L87.621 123.461a64.161 64.161 0 0034.864-33.488l49.456 8.256 5.264-31.552-49.696-8.304C124.488 23.245 93.561-2.783 58.433.239 23.305 3.26-2.723 34.186.299 69.314c2.577 29.962 25.715 54.062 55.546 57.859l32.704 261.44c-32.869 12.999-48.978 50.182-35.979 83.051 12.999 32.869 50.182 48.978 83.051 35.979 24.441-9.666 40.488-33.291 40.464-59.574v-.24l184.464-48.64c17.182 30.788 56.069 41.818 86.857 24.637 30.788-17.182 41.818-56.069 24.637-86.857a63.843 63.843 0 00-31.878-28.1l15.584-117.552c32.067-3.81 56.246-30.955 56.336-63.248zm-448-32c-17.673 0-32-14.327-32-32s14.327-32 32-32 32 14.327 32 32-14.327 32-32 32zm48 384c-17.673 0-32-14.327-32-32 0-17.673 14.327-32 32-32s32 14.327 32 32c0 17.673-14.327 32-32 32zm336-112c0 17.673-14.327 32-32 32-17.673 0-32-14.327-32-32 0-17.673 14.327-32 32-32 17.673 0 32 14.327 32 32zm-32-240c0-17.673 14.327-32 32-32 17.673 0 32 14.327 32 32s-14.327 32-32 32c-17.673 0-32-14.327-32-32z" /><path d="M271.905 82.495l31.565 5.268-5.268 31.564-31.564-5.267zM208.688 71.95l31.561 5.274-5.273 31.561-31.562-5.273z" /></svg>
+                            </a></li>
+                            <li>
+                                <a type="button" class="btn btn-light btn-md" style="cursor: pointer;border-radius: 90%;" data-toggle="tooltip" data-placement="bottom" title="Distance Tool" id="distanceTool">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 466.85 466.85" style="width: 18px;"><path d="M463.925 122.425l-119.5-119.5c-3.9-3.9-10.2-3.9-14.1 0l-327.4 327.4c-3.9 3.9-3.9 10.2 0 14.1l119.5 119.5c3.9 3.9 10.2 3.9 14.1 0l327.4-327.4c3.9-3.9 3.9-10.2 0-14.1zm-334.5 320.3l-105.3-105.3 79.1-79.1 35.9 35.9c3.8 4 10.2 4.1 14.1.2 4-3.8 4.1-10.2.2-14.1l-.2-.2-35.9-35.8 26.1-26.1 56 56c3.9 3.9 10.3 3.9 14.1-.1 3.9-3.9 3.9-10.2 0-14.1l-56-56 26.1-26.1 35.9 35.8c3.9 3.9 10.2 3.9 14.1 0 3.9-3.9 3.9-10.2 0-14.1l-35.9-35.8 26.1-26.1 56 56c3.9 3.9 10.2 3.9 14.1 0 3.9-3.9 3.9-10.2 0-14.1l-56-56 26.1-26.1 35.9 35.9c3.9 3.9 10.2 4 14.1.1 3.9-3.9 4-10.2.1-14.1l-.1-.1-35.6-36.2 26.1-26.1 56 56c3.9 3.9 10.2 3.9 14.1 0 3.9-3.9 3.9-10.2 0-14.1l-56-56 18.8-18.8 105.3 105.3-313.3 313.3z" /><path d="M137.325 331.325c-12.6-12.5-32.9-12.5-45.4 0-12.5 12.6-12.5 32.9 0 45.4s32.9 12.5 45.4 0 12.5-32.8 0-45.4zm-13.1 31c-.2.2-.5.5-1.1.4-4.7 4.7-12.4 4.7-17.2 0-4.7-4.7-4.7-12.4 0-17.2 4.7-4.7 12.4-4.7 17.2 0 4.9 4.5 5.6 11.9 1.1 16.8z" /></svg>
+                                </a>
+
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-danger btn-md d-none" style="cursor: pointer;border-radius: 90%;" data-toggle="tooltip" data-placement="bottom" title="Clear" id="clearTool">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </li>
+
+
+                        </ul>
+<!--                        <ul class="leftlayerpanel">-->
+
+<!--                            <li><a class="open-call" title="Search Layers" style="cursor: pointer;border-radius: 90%; color:#2b2c2d;"  id="clicktest"><i class="fa fa-search" aria-hidden="true"></i></a></li>-->
+<!--                            <li><a class="open-call8"  title="Cadastral"  style="cursor: pointer;border-radius: 90%;color:#2b2c2d;" id="tetste"><img src="images/cada.jpg" style="height:35px;width:35px;"></a></li>-->
+<!--                            <li><a class="open-call2"  title="Query"  style="cursor: pointer;border-radius: 90%;color:#2b2c2d;" id="clicktest2"><i class="fa fa-cog" aria-hidden="true"></i></a></li>-->
+<!--                            <li><a class="open-call4" title="Waterbody Search" style="cursor: pointer;border-radius: 90%;color:#2b2c2d;" id="wbsearch"><i class="fa fa-bandcamp" aria-hidden="true"></i></a></li>-->
+<!--                            <li><a class="open-call5" title="Asset Search" style="cursor: pointer;border-radius: 90%;color:#2b2c2d;color: #bd0a12;font-size: 25px;" id="asset_search"><i class="fa fa-map-marker"  aria-hidden="true"></i></a></li>-->
+<!--                            <li><a class="open-call3" title="Clear"  style="cursor: pointer;border-radius: 90%;color:#2b2c2d;" id="clearallmap"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>-->
+<!--&lt;!&ndash;                            <li>  <button type="button"  class="btn btn-light btn-lg myButton" data-toggle="tooltip" data-placement="bottom" title="Area Mesurement Tool" id="measureArea2">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.145 512.145" style="width: 18px;"><path d="M512.085 128.069c-.133-35.346-28.894-63.892-64.24-63.759-25.145.094-47.905 14.904-58.176 37.855l-54.64-9.136-5.344 31.568 54.912 9.168a64 64 0 0039.488 53.504l-15.584 117.552c-32.099 3.773-56.321 30.928-56.416 63.248v.24l-184.464 48.64a63.697 63.697 0 00-47.328-32L87.621 123.461a64.161 64.161 0 0034.864-33.488l49.456 8.256 5.264-31.552-49.696-8.304C124.488 23.245 93.561-2.783 58.433.239 23.305 3.26-2.723 34.186.299 69.314c2.577 29.962 25.715 54.062 55.546 57.859l32.704 261.44c-32.869 12.999-48.978 50.182-35.979 83.051 12.999 32.869 50.182 48.978 83.051 35.979 24.441-9.666 40.488-33.291 40.464-59.574v-.24l184.464-48.64c17.182 30.788 56.069 41.818 86.857 24.637 30.788-17.182 41.818-56.069 24.637-86.857a63.843 63.843 0 00-31.878-28.1l15.584-117.552c32.067-3.81 56.246-30.955 56.336-63.248zm-448-32c-17.673 0-32-14.327-32-32s14.327-32 32-32 32 14.327 32 32-14.327 32-32 32zm48 384c-17.673 0-32-14.327-32-32 0-17.673 14.327-32 32-32s32 14.327 32 32c0 17.673-14.327 32-32 32zm336-112c0 17.673-14.327 32-32 32-17.673 0-32-14.327-32-32 0-17.673 14.327-32 32-32 17.673 0 32 14.327 32 32zm-32-240c0-17.673 14.327-32 32-32 17.673 0 32 14.327 32 32s-14.327 32-32 32c-17.673 0-32-14.327-32-32z" /><path d="M271.905 82.495l31.565 5.268-5.268 31.564-31.564-5.267zM208.688 71.95l31.561 5.274-5.273 31.561-31.562-5.273z" /></svg>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </button></li>&ndash;&gt;-->
+<!--                        </ul>-->
+
+                        <div title="Legend Window" id="nonmodal2" style="height:300px;">
+                            <select style="width: 125px; height: 22px;" name="legends" id="lgnd1"
+                                    class="selectBox">
+                                <option value="undefined">-Select Layers-</option>
+                            </select>
+<!--                            <button id="btnLegendRefresh"><i class="fa fa-refresh" aria-hidden="true"></i></button><br />-->
+
+                           <div id="imgfix" >
+                               <img id="imgLegend"  src="" />
+                           </div>
+
+
+
+                        </div>
+                        <div id="wrap">
+                            <div class="content">
+
+
+                                <button class="close-call">&#x274c</button>
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                Area Selection
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body" style="background: #f2efe99e;">
+                                        <form onSubmit="return false;">
+                                            <div class="form-group row">
+                                                <label for="exampleInputEmail1" class="col-sm-5">Zone</label>
+                                                <select class="form-control-sm input-sm col-sm-7" name="ofariszone" id="ofariszone">
+
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="exampleInputEmail1" class="col-sm-5">District </label>
+                                                <select class="form-control-sm input-sm col-sm-7" name="ofarisdistrict" id="ofarisdistrict">
+                                                    <option value="-Select District-">-Select District-</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="exampleInputEmail1" class="col-sm-5">Block</label>
+                                                <select class="form-control-sm input-sm col-sm-7" name="ofarisblock" id="ofarisblock">
+
+                                                    <option value="-Select Block-">-Select Block-</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="exampleInputEmail1" class="col-sm-5">GP</label>
+                                                <select class="form-control-sm input-sm col-sm-7" name="ofarisGP" id="ofarisGP">
+
+                                                    <option value="-Select GP-">-Select GP-</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="exampleInputEmail1" class="col-sm-5">Village</label>
+                                                <select class="form-control-sm input-sm col-sm-7" name="ofarisVillage" id="ofarisVillage">
+                                                    <option value="-Select Village-">-Select Village-</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="exampleInputEmail1" class="col-sm-5"></label>
+                                                <button class="btn form-control-sm btn-primary myButton" id="resetmap">Reset</button>
+                                            </div>
+                                        </form>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wrap2">
+                            <div class="content">
+                                <button class="close-call2">&#x274c</button>
+                                <div class="tab-content">
+                                    <div id="form" class="">
+                                        <label for="layer">Select Layer</label>
+                                        <select class="form-control" id="layer" name="layer">
+                                            <option value="">Select Layer</option>
+                                        </select>
+                                        <br>
+                                        <label for="attributes">Select attribute</label>
+                                        <select class="form-control" id="attributes" name="attributes">
+                                            <option value="">Select Attributes</option>
+                                        </select>
+                                        <br>
+                                        <label for="operator">Select operator</label>
+                                        <select class="form-control" id="operator" name="operator">
+                                            <option value="">Select operator</option>
+                                        </select>
+                                        <br>
+
+                                        <label for="value">Enter Value</label>
+                                        <input type="text" class="form-control" id="value" name="value">
+                                        <br>
+                                        <button class="btn btn-success" id="loadq" >Load Query</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wrap3">
+                            <div class="content">
+                                <button class="close-call4">&#x274c</button>
+                                <div class="tab-content">
+                                    <form autocomplete="off" class="form" role="form">
+
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select Zone</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selZone" size="0">
+                                                    <option value="zone_id">-Select Zone-</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select District</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selDistrict" size="0">
+                                                    <option value="dist_id">-Select District-</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select Block</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selBlock" size="0">
+                                                    <option value="block_id">-Select Block-</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select GP</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selGP" size="0">
+                                                    <option value="gp_id">-Select GP-</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select Village</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selVillage" size="0">
+                                                    <option value="village_id">-Select Village-</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select Classification</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selclassify" size="0">
+                                                    <option value="classification_id">Select Classification</option>
+                                                    <option value="1">Aquaculture ponds/pisciculture</option>
+                                                    <option value="2">Aquatic Vegetation</option>
+                                                    <option value="3">Abandoned mining pit</option>
+
+                                                    <option value="4">Creeks</option>
+                                                    <option value="5">Distributary canals</option>
+                                                    <option value="6">Lakes/ponds</option>
+                                                    <option value="7">Main canal/Branch canal</option>
+                                                    <option value="8">Marshy/Swampy area</option>
+                                                    <option value="9">Mining quarry</option>
+                                                    <option value="10">Mud flats</option>
+                                                    <option value="12">Marshy/Swampy lands</option>
+                                                    <option value="13">Power channel</option>
+                                                    <option value="14">Reservoir/Dam (Industry)</option>
+                                                    <option value="15">Reservoir/Dam (Hydroelectricity)</option>
+                                                    <option value="16">Reservoir/Dam (Irrigation)</option>
+                                                    <option value="17">Reservoir/Dam (Water supply)</option>
+                                                    <option value="18">River/stream</option>
+                                                    <option value="19">Saltpan</option>
+                                                    <option value="20">Tailing pond</option>
+                                                    <option value="21">Tanks</option>
+                                                    <option value="22">Waterlogged area</option>
+                                                    <option value="23">WHS/Nala Bandha</option>
+
+
+
+
+
+
+
+
+                                                </select>
+
+                                        </div>
+
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+
+                                            <div class="col-lg-12">
+
+                                                <button class="btn btn-primary myButton" style="background: red;" id="resetdraw">Reset</button>
+
+                                                <button class="btn btn-primary"  id="wb_search" type="button" >Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wrap4">
+                            <div class="content">
+                                <button class="close-call5">&#x274c</button>
+                                <div class="tab-content">
+                                    <form autocomplete="off" class="form" role="form" >
+
+                                        <div class="form-group row" style="margin-bottom: 0rem;" >
+                                            <label class="col-sm-3 col-form-label form-control-label">Select Zone</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selZone2" size="0">
+
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select District</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selDistrict2" size="0">
+                                                    <option value="0">-- Select District --</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select Block</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selBlock2" size="0">
+                                                    <option value="0">-- Select Block --</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select GP</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selGP2" size="0">
+                                                    <option value="0">-- Select Gram Panchayat --</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label class="col-sm-3 col-form-label form-control-label">Select Village</label>
+
+                                                <select class="form-control-sm col-sm-9" id="selVillage2" size="0">
+                                                    <option value="0">-- Select Revenue Village --</option>
+
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label for="assetCls" class="col-sm-3 col-form-label">Asset Class</label>
+
+                                                <select  id="assetCls" name="assetCls" class="form-control-sm col-sm-9">
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label for="assetCat" class="col-sm-3 col-form-label">Asset Category</label>
+
+                                                <select id="assetCat" name="assetCat" class="form-control-sm col-sm-9" >
+                                                    <option value="0">-- Select Asset Category --</option>
+                                                </select>
+
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+                                            <label id="assetCount" class="col-sm-12 col-form-label"></label>
+
+                                        </div>
+
+                                        <div class="form-group row" style="margin-bottom: 0rem;">
+
+                                            <div class="col-lg-12">
+
+                                                <button class="btn btn-primary myButton" style="background: red;"  id="resetdraw22">Reset</button>
+
+                                                <button class="btn btn-primary"  id="asset_search2" type="button" >Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wrap5">
+                             <div class="content">
+                        <button class="close-call8">&#x274c</button>
+                        <div class="tab-content">
+                            <form autocomplete="off" class="form" role="form" onSubmit="return false">
+
+                                <div class="form-group row" style="margin-bottom: 0rem;">
+                                    <label class="col-sm-12 col-form-label form-control-label">Cadastral Search</label>
+
+
+
+                                </div>
+                                <div id="searchLoader1" style="display: none;"></div>
+                                <div id="searchLoader2" style="display: none;"></div>
+                                <div class="form-group row" style="margin-bottom: 0rem;">
+
+
+                                    <label class="col-sm-3 col-form-label form-control-label">Select District</label>
+
+                                    <select class="form-control-sm col-sm-9" id="lulcdistrict"  size="0">
+                                        <option value="-1">-- Select District --</option>
+
+                                    </select>
+
+                                </div>
+                                <div class="form-group row" style="margin-bottom: 0rem;">
+                                    <label class="col-sm-3 col-form-label form-control-label">Select Block</label>
+
+                                    <select class="form-control-sm col-sm-9" name="lulcblocks" id="lulcblocks"  size="0">
+                                        <option value="-1">-- Select Block --</option>
+
+                                    </select>
+
+                                </div>
+                                <div class="form-group row" style="margin-bottom: 0rem;">
+                                    <label class="col-sm-3 col-form-label form-control-label">Select GP</label>
+
+                                    <select class="form-control-sm col-sm-9" name="lulcgp" id="lulcgp"  size="0">
+                                        <option value="-1">-- Select Gram Panchayat --</option>
+
+                                    </select>
+
+                                </div>
+                                <div class="form-group row" style="margin-bottom: 0rem;">
+                                    <label class="col-sm-3 col-form-label form-control-label "   onChange="zoomtoVillage()">Select Village</label>
+
+                                    <select class="form-control-sm col-sm-9" name="lulcvillage" id="lulcvillage" size="0">
+                                        <option value="-1">-- Select Village --</option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group row" style="margin-bottom: 0rem;">
+                                    <label id="assetCount2" class="col-sm-12 col-form-label"></label>
+
+                                </div>
+
+                                <div class="form-group row" style="margin-bottom: 0rem;">
+
+                                    <div class="col-lg-12">
+
+                                        <button class="btn btn-primary myButton" style="background: red;" id="resetdraw222">Reset</button>
+
+                                        <button class="btn btn-primary"  id="asset_search22" type="button" >Search</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                         </div>
+
+<!--                        <button id="maplayer" class="switcherMenu2 " style="margin-top:7px;position: absolute;top: 1px; left: 74px;" onclick="openNav2()"><i class="fa fa-map" aria-hidden="true"></i></button>-->
+<!--                        <button id="mapareaslection" class="switcherMenu2 btn btn-sm btn-info" style="margin-top:7px;position: absolute;top: 8px; left: 89px;" onclick="openNav3()"><i class="fa fa-bars" aria-hidden="true"></i></button>-->
+
+
+                        <div id="mySwitcher2" class="switcher2" style="width: 0px;">
+                            <a href="javascript:void(0)" class="closebtn btn btn-sm btn-danger" onClick="closeNav2()">×</a>
+                            <div class="btn-selector" id="layerpanel2">
+
+                                <div class="card" id="layelpanel">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Layers
+
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div id="view_pop" class="tooltab-tab py-3">
+                                                <div class="mycolapsable"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div id="mySwitcher10" class="switcher10" style="width: 0px;">
+                    <a href="javascript:void(0)" class="closebtn btn btn-sm btn-danger" onClick="closeNavten()">×</a>
+                    <div class="btn-selector" id="layerpanel10">
+
+                        <div class="card" id="layelpanel101">
+                            <div class="card-header" id="headingten">
+                                <h2 class="mb-0">
+                                    <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
+                                       Asset Layers
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseten" class="collapse show" aria-labelledby="headingten" data-parent="#accordion">
+
+                                    <div id="test" class="tooltab-tab py-3">
+                                        <div id="wkslist"></div>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    </div>
+
+
+
+                <div class="d-none">
+                    <div id="KLDirectionCompas" class="ol-unselectable position-absolute klcompass">
+                        <img src="assets/img/compass.png" />
+                    </div>
+
+                </div>
+                <div id="popup" class="ol-popup">
+					<h5 id="popup-header"></h5>
+					<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+					<div id="popup-content" class="ol-popup-content"></div>
+				</div>
+                </section>
+
+    <footer class="d-none d-sm-block">
+        <div class="container-fluid" style="font-size: 12px; font-family: 'Poppins';background: #93c240;">
+            <div class="text-center text-white py-3">&copy; 2022 <strong><span><a href="#" class="text-white" target="_blank">Odisha Integrated Irrigation Project for Climate Resilient Agriculture (OIIPCRA) | All Rights Reserved</a></span></strong>. Powered by ORSAC</div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="assets/vendor/bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+
+    <script src="pagejs/mapcomponent/ol.js"></script>
+    <script src="../js/costdefine.js"></script>
+
+
+    <script src="pagejs/mapcomponent/map_opicra.js"></script>
+    <script src="assets/vendor/fancybox-3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="pagejs/mapcomponent/maputils_opicra.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="pagejs/mapcomponent/controls_opicra.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+   
+
+
+
+
+
+<!--    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<!--    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>-->
+    <script>
+
+
+
+
+
+
+
+            var view2 = olMap.getView();
+			var zoom = view2.getZoom();
+			var center = view2.getCenter();
+            var rotation = view2.getRotation();
+ $('#resetmap').on('click', function(){
+         vectorSourceZone.clear()
+         vectorSourceDistrict.clear()
+         vectorSourceBlock.clear()
+         vectorSourceGP.clear()
+         vectorSourceVillage.clear()
+
+         view2.setCenter(center);
+        view2.setRotation(rotation);
+        view2.setZoom(zoom);
+
+
+       })
+       $('#resetdraw').on('click', function(){
+         vectorSourceZone.clear()
+         vectorSourceDistrict.clear()
+         vectorSourceBlock.clear()
+         vectorSourceGP.clear()
+         vectorSourceVillage.clear()
+         view2.setCenter(center);
+        view2.setRotation(rotation);
+        view2.setZoom(zoom);
+         paramswb = {
+                "LAYERS": "waterbody_village_map",
+                "TILED": "true",
+                "VERSION": "1.3.0",
+                "STYLES":"Waterbody"
+
+
+            };
+              mapapi.ofaris_waterbody.N.source.updateParams(paramswb)
+
+       })
+
+$('#close2').on('click', function(){
+         console.log("hello")
+
+       })
+
+
+
+
+
+
+    </script>
+   
+<script>
+     function openNav2() {
+        document.getElementById("mySwitcher2").style.width = "310px";
+    }
+
+    function closeNav2() {
+        document.getElementById("mySwitcher2").style.width = "0";
+    }
+      function openNavten() {
+        document.getElementById("mySwitcher10").style.width = "400px";
+    }
+     function closeNavten() {
+        document.getElementById("mySwitcher10").style.width = "0";
+    }
+
+     function openNav3() {
+        document.getElementById("mySwitcher3").style.width = "290px";
+    }
+
+    function closeNav3() {
+        document.getElementById("mySwitcher3").style.width = "0";
+    }
+</script>
+
+<script>
+      function goBack() {
+       window.location.href = '../index.html';
+        }
+
+</script>
+    <script>
+
+    </script>
+
+</body>
+</html>

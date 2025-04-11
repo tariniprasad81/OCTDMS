@@ -14424,3 +14424,34 @@ ul.custom li:before {
         margin-left: 0;
     margin-right: 9px;
 }
+
+.btn-contact{
+    background-color: #474747;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.65rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 25px;
+    width: 200px;
+}
+
+.btn-contact:hover, .btn-contact:focus{
+    background-color: #f9bb42;
+}
+
+.form-control:focus{
+    border-color: #f9bb42;
+    outline: none;
+    box-shadow: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
