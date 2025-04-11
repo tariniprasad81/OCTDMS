@@ -14594,12 +14594,14 @@ ul.tabs li.active {
 }
 
 .img-wrapper-vertical{
-    width: 109px;
-    height: 148px;
+    /*width: 109px;
+    height: 148px;*/
+    height: 190px;
     margin: auto;
     margin-top: 15px;
 }
 
 .img-wrapper-vertical img{
-    height: 145px;
+    /*height: 145px;*/
+    height: 187px;
 }
