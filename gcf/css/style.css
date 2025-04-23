@@ -5744,7 +5744,7 @@ box-shadow: 0px -4px 10px 3px #e8e8e8;
     position: relative;
     display: block;
     margin: 5px 0;
-	z-index:99999999;
+	z-index:9;
 }
 .logo-box-style3 a{
     display: inline-block;
@@ -13266,7 +13266,7 @@ ul.list.check-circle li:before {
 }
 @media screen and (min-width: 1200px) {
   #overlay img {
-    width: 50%;
+    width: 60%;
   }
 }
 

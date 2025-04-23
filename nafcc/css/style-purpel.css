@@ -1,0 +1,107 @@
+body {color: #FF33FF;background:#000 none;}
+p{color:#FF33FF}
+.exchange h4{color: #FF33FF}
+.mission h4{color: #FF33FF}
+.whatis h1{color: #FF33FF}
+.whatis span{color: #FF33FF}
+h1,h2,h3,h4,h5,a{color: #FF33FF}
+.questionmark{color: #FF33FF}
+.body-column a{color: #FF33FF}
+.register-box p{ color:#38527d}
+.register-box h5 a{ color:#38527d}
+.login-box h4 { color:#38527d}
+.login-box label { color:#38527d}
+.login-box small { color:#38527d}
+table.gridview tr td a{color:#38527d;}
+a, a:link, a:visited{color: #FF33FF}
+#bottom-fullwidth{background:none;}
+.container{background:none;}
+#banner{background:none;}
+#footer-fulwidth{background:#000 none;} 
+#footer-fulwidth .footer{background:#000 none;}
+#top-links{background:#000 none;}
+#top-links ul li a{color:#FF33FF;}
+.search_bg{background:#000 none;}
+#navigation ul li a:hover{background:#000;color:#FF33FF}
+#navigation ul li ul li a{background:#000;color:#FF33FF}
+.state{background:#000 none;}
+#content-wrapper .sidebar{background:#000 none;}
+.sidebar-content ul li a{color:#FF33FF;}
+.tab{background:#000 none;}
+.programe{background:#000 none;}
+.programe ul{background:#000 none;}
+.event_bg{background:#000 none;}
+.link_bg{background:#000 none;}
+.sidebar .activities_bg{background:#000 none;}
+.top-bar-style2{background-color:#FF33FF; color:#FF0;}
+.topbar-style3-area {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #ededed;
+    padding: 12px 0;
+}
+.topbar-style3-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.topbar-style3-left{
+    position: relative;
+    display: block;    
+}
+.topbar-style3-left ul{}
+.topbar-style3-left ul li{
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    line-height: 28px;
+}
+.topbar-style3-left ul li:last-child{
+    margin-right: 0;
+}
+.topbar-style3-left ul li a{
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 500ms ease;
+}
+.topbar-style3-left ul li a:hover{
+    color: #000;
+}
+
+.topbar-style3-right {
+    position: relative;
+    display: block;
+    max-width:430px;
+    width: 100%;
+}
+.topbar-style3-right ul {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    float: left;
+    border-right: 1px solid #dadada;
+    padding-right: 20px;
+}
+.topbar-style3-right ul li{
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    line-height: 28px;
+}
+.topbar-style3-right ul li:last-child{
+    margin-right: 0;
+}
+.topbar-style3-right ul li a{
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
+.topbar-style3-right ul li a:hover{
+    color: #000;
+}
+
