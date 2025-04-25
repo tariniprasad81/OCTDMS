@@ -14497,3 +14497,9 @@ input[type=number]{
 .img-overlay:hover .gallery-title{
     opacity: 1;
 }
+
+.collaboration-iframe{
+    width: 25%;
+    float: right;
+    margin: 5px 0 10px 15px;
+}

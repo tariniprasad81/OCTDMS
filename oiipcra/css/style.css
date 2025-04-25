@@ -14639,3 +14639,20 @@ input::-webkit-inner-spin-button {
 input[type=number]{
     -moz-appearance: textfield;
 }
+
+.img-overlay .gallery-title{
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    padding: 5px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #1e91ca;
+    opacity: 0;
+}
+
+.img-overlay:hover .gallery-title{
+    opacity: 1;
+}
