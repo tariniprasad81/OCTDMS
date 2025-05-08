@@ -14662,3 +14662,19 @@ input[type=number]{
     float: right;
     margin: 5px 0 10px 15px;
 }
+
+.contacts-box h6{
+    color: #f9bb42;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.contacts-box a{
+    color: #474747;
+}
+
+.contacts-box a:hover{
+    color: #121212;
+}
