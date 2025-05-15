@@ -167,63 +167,70 @@ var vectorSource2 = new ol.source.Vector();
         })
 
     });
-    dist_bnd_4k = new ol.layer.Image({
-        name: 'District Boundary',
-        description: 'district_boundary_4k',
+    let dist_bnd_4k = new ol.layer.Image({
+        name: "District Boundary",
+        description: "district_boundary",
         source: new ol.source.ImageWMS({
-            url: urlGeoserver1,
-            params: {
-                'LAYERS': 'district_boundary_4k',
-                'FORMAT': 'image/png',
-                'TILED': false,
-                'VERSION': '1.3.0',
-            },
+          url: sampadgcfofaris,
+          params: {
+            LAYERS: "district_boundary_oiipcra_gcf",
+            FORMAT: "image/png",
+            TILED: false,
+            VERSION: "1.3.0",
+            STYLES:"gcf_octdms"
+          },
         }),
+        crossOrigin: "anonymous",
         visible: true,
-        crossOrigin: 'anonymous'
-
-    });
-    var block_bnd_4k = new ol.layer.Image({
-        name: 'Block Boundary',
-        description: 'block_boundary_4k',
+      });
+    
+      let block_bnd_4k = new ol.layer.Image({
+        name: "Block Boundary",
+        description: "block_boundary",
         source: new ol.source.ImageWMS({
-            url: urlGeoserver1,
-            params: {
-                'LAYERS': 'block_boundary_4k',
-                'FORMAT': 'image/png',
-                'TILED': false,
-                'VERSION': '1.3.0',
-            }
-        })
-    });
-    var gp_bnd_4k = new ol.layer.Image({
-        name: 'GP Boundary',
-        description: 'gram_panchayat_boundary_4k',
+          url: sampadgcfofaris,
+          params: {
+            LAYERS: "block_boundary",
+            FORMAT: "image/png",
+            TILED: false,
+            VERSION: "1.3.0",
+          },
+        }),
+        crossOrigin: "anonymous",
+        visible: false,
+      });
+    
+      let gp_bnd_4k = new ol.layer.Image({
+        name: "GP Boundary",
+        description: "grampanchyat_boundary",
         source: new ol.source.ImageWMS({
-            url: urlGeoserver1,
-            params: {
-                'LAYERS': 'gram_panchayat_boundary_4k',
-                'FORMAT': 'image/png',
-                'TILED': false,
-                'VERSION': '1.3.0',
-            },
-        })
-
-    });
-    var village_bnd_4k = new ol.layer.Image({
-        name: 'Village Boundary',
-        description: 'revenue_village_boundary_4k',
+          url: sampadgcfofaris,
+          params: {
+            LAYERS: "grampanchyat_boundary",
+            FORMAT: "image/png",
+            TILED: false,
+            VERSION: "1.3.0",
+          },
+        }),
+        crossOrigin: "anonymous",
+        visible: false,
+      });
+    
+      let village_bnd_4k = new ol.layer.Image({
+        name: "Village Boundary",
+        description: "odisha_revenue_village_boundary_2021",
         source: new ol.source.ImageWMS({
-            url: urlGeoserver1,
-            params: {
-                'LAYERS': 'revenue_village_boundary_4k',
-                'FORMAT': 'image/png',
-                'TILED': false,
-                'VERSION': '1.3.0',
-            },
-        })
-
-    });
+          url: sampadgcfofaris,
+          params: {
+            LAYERS: "odisha_revenue_village_boundary_2021",
+            FORMAT: "image/png",
+            TILED: false,
+            VERSION: "1.3.0",
+          },
+        }),
+        crossOrigin: "anonymous",
+        visible: false,
+      });
     var gcferror = new ol.layer.Image({
         name: 'GCF Error Status',
         description: 'GCF Error Status',
@@ -468,7 +475,7 @@ var vectorSource2 = new ol.source.Vector();
                                     }),
                                      title: "GCF",
                                     crossOrigin: 'anonymous',
-                                    visible: false
+                                    visible: true
 
                                 });
                                 let ofaris_oiipcra_mip = new ol.layer.Image({
@@ -1271,7 +1278,7 @@ var vectorSource2 = new ol.source.Vector();
         crossOrigin: 'anonymous',
 
 
-        layers: [groupbasemap, groupgoogle,wmslayerwaterbody,ofaris_gcf, groupNaturalResources,groupinfrastructurenetwork,groupinfrastructuresocialothers, groupAdmin],
+        layers: [groupbasemap, groupgoogle,wmslayerwaterbody, groupNaturalResources,groupinfrastructurenetwork,groupinfrastructuresocialothers, groupAdmin,ofaris_gcf],
         view: new ol.View({
             center: ol.proj.transform([84.55, 20.02], 'EPSG:4326', 'EPSG:3857'),
             // 84.35, 19.92
